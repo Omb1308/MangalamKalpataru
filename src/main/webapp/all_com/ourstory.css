@@ -1,0 +1,130 @@
+/* =========================
+   GLOBAL FONTS
+========================= */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Manrope', sans-serif;
+}
+
+
+/* =========================
+   BACKGROUND PATTERN
+========================= */
+.organic-pattern {
+    background-image: radial-gradient(#11d411 0.5px, transparent 0.5px);
+    background-size: 24px 24px;
+    opacity: 0.1;
+}
+
+
+/* =========================
+   BUTTON / GRADIENT
+========================= */
+.forest-gradient {
+    background: linear-gradient(135deg, #012d1d 0%, #1b4332 100%);
+}
+
+
+/* =========================
+   SHADOW
+========================= */
+.shadow-2xl {
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================
+   MAGAZINE CARD (HOVER)
+========================= */
+.magazine-card {
+    transition: transform 0.3s ease;
+}
+
+.magazine-card:hover {
+    transform: translateY(-8px);
+}
+
+
+/* =========================
+   ICON BOX (CIRCLE)
+========================= */
+.icon-box {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+
+/* =========================
+   SMALL INFO CARD (ICON BASED)
+========================= */
+.title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #012d1d;
+    margin-bottom: 6px;
+}
+
+.desc {
+    color: #414844;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+/* =========================
+   INFOGRAPHIC BOX
+========================= */
+.icon-card {
+    width: 96px;
+    height: 96px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+
+/* =========================
+   MAIN INFO CARDS (IMPORTANT)
+========================= */
+.info-card {
+    padding: 24px; /* reduced from 32px for better spacing */
+    background: #f3f4f5;
+    border-left: 5px solid;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+/* Hover Effect */
+.info-card:hover {
+    transform: translateY(-4px);
+}
+
+
+/* =========================
+   CARD TEXT
+========================= */
+.card-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #012d1d;
+    margin-bottom: 6px;
+}
+
+.card-desc {
+    color: #414844;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0; /* 🔥 removes extra bottom space */
+}
+

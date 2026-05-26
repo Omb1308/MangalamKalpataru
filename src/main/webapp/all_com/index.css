@@ -1,0 +1,460 @@
+/* Global Font */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Custom Utility Classes */
+.beige-gradient {
+    background: linear-gradient(180deg, #F5F2EA 0%, #FFFFFF 100%);
+}
+
+/* Smooth Hover Animation */
+.scale-hover {
+    transition: all 0.3s ease;
+}
+
+.scale-hover:hover {
+    transform: scale(1.05);
+}
+
+
+.journey-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    border: 1px solid #f1f5f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.journey-card:hover {
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.journey-icon {
+    width: 64px;
+    height: 64px;
+    background: #13ec13;
+    color: #102210;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.journey-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+.journey-desc {
+    font-size: 0.875rem;
+    color: #64748b;
+}
+
+
+/* =============================== */
+/* SUSTAINABLE MARKETPLACE SECTION */
+/* =============================== */
+
+.marketplace {
+    padding: 6rem 1.5rem;
+    background: #ffffff;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.section-header h2 {
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: #0f172a;
+}
+
+.section-header p {
+    color: #64748b;
+}
+
+/* Product Grid */
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* Product Card */
+
+.product-card {
+    background: #ffffff;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    border: 1px solid #f1f5f9;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+    transition: 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 45px rgba(0,0,0,0.12);
+}
+
+.product-image img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    transition: 0.4s ease;
+}
+
+.product-card:hover img {
+    transform: scale(1.08);
+}
+
+.badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: #13ec13;
+    color: #102210;
+    padding: 4px 12px;
+    font-size: 0.7rem;
+    font-weight: 800;
+    border-radius: 6px;
+}
+
+.product-content {
+    padding: 1.5rem;
+}
+
+.product-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.price {
+    font-weight: 800;
+    color: #13ec13;
+}
+
+.add-btn {
+    width: 100%;
+    padding: 0.9rem;
+    border-radius: 0.75rem;
+    border: none;
+    background: #f1f5f9;
+    font-weight: 700;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.add-btn:hover {
+    background: #13ec13;
+    color: #102210;
+}
+
+
+/* ================================= */
+/* RECENT MARKETPLACE SECTION */
+/* ================================= */
+
+.recent-marketplace {
+    padding: 6rem 1.5rem;
+    background: #f6f8f6;
+}
+
+.dark .recent-marketplace {
+    background: #102210;
+}
+
+.recent-container {
+    max-width: 1280px;
+    margin: auto;
+}
+
+.recent-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.recent-header h2 {
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+.recent-header p {
+    color: #64748b;
+}
+
+.dark .recent-header p {
+    color: #94a3b8;
+}
+
+.recent-view-all {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 700;
+    color: #13ec13;
+    text-decoration: none;
+}
+
+.recent-view-all:hover {
+    text-decoration: underline;
+}
+
+/* Grid */
+
+.recent-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* Card */
+
+.recent-card {
+    background: white;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    transition: 0.3s ease;
+}
+
+.dark .recent-card {
+    background: #1e293b;
+    border-color: #334155;
+}
+
+.recent-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 45px rgba(0,0,0,0.12);
+}
+
+/* Image */
+
+.recent-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.recent-image img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    transition: 0.4s ease;
+}
+
+.recent-card:hover img {
+    transform: scale(1.08);
+}
+
+.recent-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: #13ec13;
+    color: #102210;
+    padding: 4px 12px;
+    font-size: 0.7rem;
+    font-weight: 800;
+    border-radius: 6px;
+}
+
+.recent-badge.green {
+    background: #22c55e;
+    color: white;
+}
+
+.recent-badge.orange {
+    background: #f97316;
+    color: white;
+}
+
+/* Content */
+
+.recent-content {
+    padding: 1.5rem;
+}
+
+.recent-content h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.recent-content p {
+    font-size: 0.875rem;
+    color: #64748b;
+    margin-bottom: 1.5rem;
+}
+
+.dark .recent-content p {
+    color: #94a3b8;
+}
+
+.recent-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.recent-price {
+    font-weight: 800;
+    color: #13ec13;
+    font-size: 1rem;
+}
+
+.recent-btn {
+    background: #13ec13;
+    color: #102210;
+    border: none;
+    padding: 0.6rem 0.8rem;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.recent-btn:hover {
+    background: #10c910;
+}
+
+
+/* ================================= */
+/* FARMER'S CORNER SECTION */
+/* ================================= */
+
+.farm-section {
+    padding: 6rem 1.5rem;
+    background: #f1f5f9;
+}
+
+.dark .farm-section {
+    background: #0f172a;
+}
+
+.farm-container {
+    max-width: 1280px;
+    margin: auto;
+}
+
+.farm-card {
+    background: #102210;
+    border-radius: 2rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 1024px) {
+    .farm-card {
+        flex-direction: row;
+    }
+}
+
+/* LEFT CONTENT */
+
+.farm-content {
+    padding: 3rem;
+    flex: 1;
+}
+
+.farm-title {
+    font-size: 2rem;
+    font-weight: 900;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+}
+
+.farm-description {
+    color: #cbd5e1;
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+}
+
+/* STEPS */
+
+.farm-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.farm-step {
+    display: flex;
+    gap: 1rem;
+}
+
+.farm-step-number {
+    width: 40px;
+    height: 40px;
+    background: #13ec13;
+    color: #102210;
+    font-weight: 900;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.farm-step h4 {
+    color: #ffffff;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.farm-step p {
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+/* BUTTON */
+
+.farm-btn {
+    display: inline-block;
+    margin-top: 3rem;
+    background: #13ec13;
+    color: #102210;
+    font-weight: 900;
+    padding: 1rem 2.5rem;
+    border-radius: 1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.farm-btn:hover {
+    background: #10c910;
+    transform: translateY(-3px);
+}
+
+/* IMAGE */
+
+.farm-image {
+    flex: 1;
+    min-height: 400px;
+}
+
+.farm-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
