@@ -15,8 +15,8 @@ public class DBConnection {
     private static final String USER = "avnadmin";
 
     // Aiven Password
-    private static final String PASSWORD = "AVNS_Yp357WDQudsON-kSuOb";
-
+   
+    private static final String PASSWORD = System.getenv("AVNS_Yp357WDQudsON-kSuOb");
     static {
 
         try {
