@@ -1,20 +1,21 @@
 package com.mangalam.util;
-import com.mysql.cj.jdbc.AbandonedConnectionCleanupThread; 
+
+import com.mysql.cj.jdbc.AbandonedConnectionCleanupThread;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DBConnection {
 
-    // MySQL Database URL
+    // Aiven MySQL Database URL
     private static final String URL =
-            "jdbc:mysql://localhost:3306/mangalam_db?useSSL=false&serverTimezone=UTC";
+        "jdbc:mysql://mysql-363800ad-ombhavsar40-7913.c.aivencloud.com:25100/defaultdb?ssl-mode=REQUIRED";
 
-    // MySQL Username
-    private static final String USER = "root";
+    // Aiven Username
+    private static final String USER = "avnadmin";
 
-    // XAMPP me mostly blank rehta hai
-    private static final String PASSWORD = "root@om1308";
+    // Aiven Password
+    private static final String PASSWORD = "AVNS_Yp357WDQudsON-kSuOb";
 
     static {
 
@@ -58,6 +59,7 @@ public class DBConnection {
 
         return null;
     }
+
     public static void shutdown() {
 
         try {
