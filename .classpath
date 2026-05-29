@@ -14,8 +14,6 @@
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
 	<classpathentry kind="lib" path="C:/Tomcat 10.1/lib/servlet-api.jar"/>
-	<classpathentry kind="lib" path="C:/Users/Om BHawsar/Downloads/activation-1.1.1 (1).jar"/>
-	<classpathentry kind="lib" path="C:/Users/Om BHawsar/Downloads/javax.mail-1.6.2.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Om BHawsar/Downloads/razorpay-java-1.4.7.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Om BHawsar/Downloads/json-20240303.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Om BHawsar/Downloads/kotlin-stdlib-1.4.10.jar"/>
@@ -25,5 +23,7 @@
 	<classpathentry kind="lib" path="C:/Users/Om BHawsar/Downloads/commons-lang3-3.12.0.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Om BHawsar/Downloads/commons-text-1.10.0.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Om BHawsar/Downloads/mysql-connector-j-9.7.0/mysql-connector-j-9.7.0/mysql-connector-j-9.7.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Om BHawsar/Downloads/jakarta.activation-2.0.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Om BHawsar/Downloads/jakarta.mail-2.0.1 (1).jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

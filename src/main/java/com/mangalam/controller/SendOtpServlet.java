@@ -1,11 +1,11 @@
 package com.mangalam.controller;
 
-import jakarta.servlet.*;
+import jakarta.servlet.*; 
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.WebServlet;
 
-import javax.mail.*;
-import javax.mail.internet.*;
+import jakarta.mail.*;
+import jakarta.mail.internet.*;
 
 import java.io.IOException;
 import java.util.Properties;

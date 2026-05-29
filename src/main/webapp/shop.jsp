@@ -8,10 +8,6 @@ java.sql.*" %>
 
 <%
 
-// =========================
-// CACHE CONTROL
-// =========================
-
 response.setHeader(
         "Cache-Control",
         "no-cache, no-store, must-revalidate"
@@ -26,10 +22,6 @@ response.setDateHeader(
         "Expires",
         0
 );
-
-// =========================
-// FETCH PRODUCTS
-// =========================
 
 ProductDAO dao =
         new ProductDAO();
@@ -80,7 +72,7 @@ tailwind.config = {
 
 </head>
 
-<body class="bg-background-light overflow-hidden">
+<body class="bg-background-light overflow-x-hidden">
 
 <jsp:include page="all_com/navbar.jsp" />
 
@@ -88,13 +80,15 @@ tailwind.config = {
 <!-- MAIN -->
 <!-- ========================= -->
 
-<main class="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row gap-8 items-start h-[calc(100vh-80px)] overflow-hidden">
+<main
+class="max-w-7xl mx-auto px-4 sm:px-6 py-6 flex flex-col md:flex-row gap-6 lg:gap-8 items-start min-h-screen">
 
 <!-- ========================= -->
 <!-- SIDEBAR -->
 <!-- ========================= -->
 
-<aside class="w-full md:w-64 sticky top-24 self-start bg-white p-5 rounded-2xl shadow border border-gray-100 space-y-6">
+<aside
+class="w-full md:w-64 bg-white p-5 rounded-2xl shadow border border-gray-100 space-y-6 md:sticky md:top-24 self-start">
 
     <h3 class="text-lg font-bold text-earth-green">
 
@@ -112,53 +106,59 @@ tailwind.config = {
 
         </h4>
 
-        <label>
-            <input type="checkbox"
-                   class="category"
-                   value="Soil & Fertilizers">
+        <div class="space-y-2 text-sm">
 
-            Soil & Fertilizers
-        </label>
+            <label class="flex items-center gap-2">
 
-        <br>
+                <input type="checkbox"
+                       class="category"
+                       value="Soil & Fertilizers">
 
-        <label>
-            <input type="checkbox"
-                   class="category"
-                   value="Ropes & Fiber">
+                Soil & Fertilizers
 
-            Ropes & Fiber
-        </label>
+            </label>
 
-        <br>
+            <label class="flex items-center gap-2">
 
-        <label>
-            <input type="checkbox"
-                   class="category"
-                   value="Home Decor">
+                <input type="checkbox"
+                       class="category"
+                       value="Ropes & Fiber">
 
-            Home Decor
-        </label>
+                Ropes & Fiber
 
-        <br>
+            </label>
 
-        <label>
-            <input type="checkbox"
-                   class="category"
-                   value="Eco Products">
+            <label class="flex items-center gap-2">
 
-            Eco Products
-        </label>
+                <input type="checkbox"
+                       class="category"
+                       value="Home Decor">
 
-        <br>
+                Home Decor
 
-        <label>
-            <input type="checkbox"
-                   class="category"
-                   value="Handicrafts">
+            </label>
 
-            Handicrafts
-        </label>
+            <label class="flex items-center gap-2">
+
+                <input type="checkbox"
+                       class="category"
+                       value="Eco Products">
+
+                Eco Products
+
+            </label>
+
+            <label class="flex items-center gap-2">
+
+                <input type="checkbox"
+                       class="category"
+                       value="Handicrafts">
+
+                Handicrafts
+
+            </label>
+
+        </div>
 
     </div>
 
@@ -179,7 +179,7 @@ tailwind.config = {
                value="5000"
                class="w-full">
 
-        <p class="mt-2">
+        <p class="mt-2 text-sm">
 
             ₹<span id="priceValue">5000</span>
 
@@ -193,15 +193,17 @@ tailwind.config = {
 <!-- PRODUCTS SECTION -->
 <!-- ========================= -->
 
-<div class="flex-1 h-full overflow-hidden flex flex-col">
+<div class="flex-1 w-full flex flex-col">
 
     <!-- ========================= -->
-    <!-- STICKY HEADER -->
+    <!-- HEADER -->
     <!-- ========================= -->
 
-    <div class="sticky top-0 z-20 bg-background-light pb-4 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+    <div
+    class="sticky top-0 z-20 bg-background-light pb-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
 
-        <h1 class="text-3xl font-bold text-earth-green">
+        <h1
+        class="text-2xl sm:text-3xl font-bold text-earth-green">
 
             Explore Products
 
@@ -209,7 +211,7 @@ tailwind.config = {
 
         <!-- SEARCH -->
 
-        <div class="relative w-full md:w-80">
+        <div class="relative w-full sm:w-80">
 
             <input
                 type="text"
@@ -218,7 +220,8 @@ tailwind.config = {
                 class="w-full border border-gray-300 rounded-xl px-4 py-2 pl-10 focus:outline-none focus:ring-2 focus:ring-green-500"
             >
 
-            <span class="absolute left-3 top-2.5 text-gray-400">
+            <span
+            class="absolute left-3 top-2.5 text-gray-400">
 
                 🔍
 
@@ -232,8 +235,9 @@ tailwind.config = {
     <!-- PRODUCT GRID -->
     <!-- ========================= -->
 
-    <div id="productGrid"
-         class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 overflow-y-auto pr-2 flex-1">
+    <div
+    id="productGrid"
+    class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5 sm:gap-6 pb-10">
 
     <%
 
@@ -273,25 +277,28 @@ tailwind.config = {
 
     <!-- PRODUCT CARD -->
 
-    <div class="product bg-white p-4 rounded-xl shadow"
+    <div
+    class="product bg-white p-4 rounded-2xl shadow hover:shadow-lg transition duration-300"
 
-         data-name="<%= name.toLowerCase() %>"
+    data-name="<%= name.toLowerCase() %>"
 
-         data-category="<%= cat %>"
+    data-category="<%= cat %>"
 
-         data-price="<%= price %>">
+    data-price="<%= price %>">
 
         <!-- IMAGE -->
 
-        <img src="${pageContext.request.contextPath}/images/products/<%= img %>"
+        <img
+        src="${pageContext.request.contextPath}/images/products/<%= img %>"
 
-             onerror="this.src='${pageContext.request.contextPath}/images/common/default.png'"
+        onerror="this.src='${pageContext.request.contextPath}/images/common/default.png'"
 
-             class="w-full h-52 object-cover rounded">
+        class="w-full h-52 sm:h-56 object-cover rounded-xl">
 
         <!-- NAME -->
 
-        <h3 class="mt-3 font-bold text-lg">
+        <h3
+        class="mt-4 font-bold text-lg text-earth-green">
 
             <%= name %>
 
@@ -299,7 +306,8 @@ tailwind.config = {
 
         <!-- CATEGORY -->
 
-        <p class="text-sm text-gray-500 mb-2">
+        <p
+        class="text-sm text-gray-500 mb-2">
 
             <%= cat %>
 
@@ -307,7 +315,8 @@ tailwind.config = {
 
         <!-- DESCRIPTION -->
 
-        <p class="text-xs text-gray-400 mb-3">
+        <p
+        class="text-xs text-gray-400 mb-3 line-clamp-2">
 
             <%= desc %>
 
@@ -315,7 +324,8 @@ tailwind.config = {
 
         <!-- PACK -->
 
-        <p class="text-sm text-green-700 font-semibold mb-2">
+        <p
+        class="text-sm text-green-700 font-semibold mb-4">
 
             Pack of <%= packSize %>
 
@@ -323,11 +333,13 @@ tailwind.config = {
 
         <!-- PRICE + BUTTON -->
 
-        <div class="flex justify-between items-center">
+        <div
+        class="flex items-center justify-between gap-3">
 
             <!-- PRICE -->
 
-            <span class="text-green-700 font-bold text-lg">
+            <span
+            class="text-green-700 font-bold text-lg">
 
                 ₹<%= price %>
 
@@ -343,8 +355,9 @@ tailwind.config = {
 
             <!-- ADD TO CART -->
 
-            <form action="AddToCartServlet"
-                  method="POST">
+            <form
+            action="AddToCartServlet"
+            method="POST">
 
                 <input type="hidden"
                        name="productId"
@@ -367,7 +380,7 @@ tailwind.config = {
                        value="<%= img %>">
 
                 <button
-                    class="bg-primary px-3 py-1 rounded text-earth-green font-bold">
+                class="bg-primary hover:scale-105 transition px-4 py-2 rounded-lg text-earth-green font-bold">
 
                     Add
 
@@ -384,10 +397,8 @@ tailwind.config = {
             <!-- OUT OF STOCK -->
 
             <button
-
-                class="bg-gray-400 px-3 py-1 rounded text-white font-bold cursor-not-allowed"
-
-                disabled>
+            class="bg-gray-400 px-4 py-2 rounded-lg text-white font-bold cursor-not-allowed"
+            disabled>
 
                 Out of Stock
 
@@ -408,17 +419,16 @@ tailwind.config = {
         }
     }
 
-    // EMPTY
-
     if (!found) {
 
     %>
 
-    <p>
+    <div
+    class="col-span-full text-center py-20 text-gray-500">
 
         No products available
 
-    </p>
+    </div>
 
     <%
 
@@ -450,11 +460,7 @@ const priceRange =
 const priceValue =
         document.getElementById("priceValue");
 
-// FILTER FUNCTION
-
 function filterProducts() {
-
-    // CATEGORY
 
     let selected =
         Array.from(categories)
@@ -463,19 +469,13 @@ function filterProducts() {
 
         .map(c => c.value);
 
-    // PRICE
-
     let max =
         parseInt(priceRange.value);
-
-    // SEARCH
 
     let search =
         document.getElementById("searchInput")
         .value
         .toLowerCase();
-
-    // LOOP PRODUCTS
 
     products.forEach(p => {
 
@@ -488,25 +488,17 @@ function filterProducts() {
         let name =
             p.dataset.name;
 
-        // CATEGORY MATCH
-
         let matchCategory =
 
             selected.length === 0
 
             || selected.includes(cat);
 
-        // PRICE MATCH
-
         let matchPrice =
             price <= max;
 
-        // SEARCH MATCH
-
         let matchSearch =
             name.includes(search);
-
-        // FINAL
 
         let show =
 
@@ -521,8 +513,6 @@ function filterProducts() {
     });
 }
 
-// CATEGORY FILTER
-
 categories.forEach(c => {
 
     c.addEventListener(
@@ -531,8 +521,6 @@ categories.forEach(c => {
     );
 
 });
-
-// PRICE FILTER
 
 priceRange.addEventListener(
     "input",
@@ -546,15 +534,11 @@ priceRange.addEventListener(
     }
 );
 
-// SEARCH FILTER
-
 document.getElementById("searchInput")
 .addEventListener(
     "input",
     filterProducts
 );
-
-// INITIAL LOAD
 
 filterProducts();
 
