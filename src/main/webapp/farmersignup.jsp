@@ -331,7 +331,7 @@ function sendOTP() {
 
     document.getElementById("sendBtn").disabled = true;
 
-    fetch("/MangalamKalpataru/SendOtpServlet", {
+    fetch(window.location.origin + "/SendOtpServlet", {
 
         method: "POST",
 
@@ -389,7 +389,7 @@ function verifyOTP() {
         return;
     }
 
-    fetch("/MangalamKalpataru/VerifyOtpServlet", {
+    fetch(window.location.origin + "/VerifyOtpServlet", {
 
         method: "POST",
 

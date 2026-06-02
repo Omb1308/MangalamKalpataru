@@ -146,7 +146,7 @@ function sendOTP() {
         return;
     }
 
-    fetch("/MangalamKalpataru/SendOtpServlet", {
+    fetch(window.location.origin + "/SendOtpServlet", {
         method: "POST",
         headers: {
             "Content-Type": "application/x-www-form-urlencoded"
@@ -168,7 +168,7 @@ function verifyOTP() {
         return;
     }
 
-    fetch("/MangalamKalpataru/VerifyOtpServlet", {
+    fetch(window.location.origin + "/VerifyOtpServlet", {
         method: "POST",
         headers: {
             "Content-Type": "application/x-www-form-urlencoded"
